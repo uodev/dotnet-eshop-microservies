@@ -10,6 +10,7 @@
     <ItemGroup>
       <Content Include="..\..\..\..\.dockerignore">
         <Link>.dockerignore</Link>
+        <DependentUpon>Dockerfile1</DependentUpon>
       </Content>
     </ItemGroup>
 
@@ -18,8 +19,13 @@
     </ItemGroup>
 
     <ItemGroup>
+      <PackageReference Include="AspNetCore.HealthChecks.NpgSql" Version="9.0.0" />
+      <PackageReference Include="AspNetCore.HealthChecks.Redis" Version="9.0.0" />
+      <PackageReference Include="AspNetCore.HealthChecks.UI.Client" Version="9.0.0" />
       <PackageReference Include="Carter" Version="9.0.0" />
       <PackageReference Include="Marten" Version="8.8.2" />
+      <PackageReference Include="Microsoft.Extensions.Caching.StackExchangeRedis" Version="9.0.8" />
+      <PackageReference Include="Scrutor" Version="6.1.0" />
     </ItemGroup>
 
 </Project>
