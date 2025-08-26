@@ -22,7 +22,7 @@ services:
     volumes:
       - ${APPDATA}/Microsoft/UserSecrets:/home/app/.microsoft/usersecrets:ro
       - ${APPDATA}/ASP.NET/Https:/home/app/.aspnet/https:ro
-    
+  
   basketdb:
     container_name: basketdb
     environment:
@@ -34,3 +34,10 @@ services:
       - "5433:5432"
     volumes:
       - postgres_basket:/var/lib/postgresql/data/
+  
+  distributedcache:
+    container_name: distributedcache
+    restart: always
+    ports:
+      - "6378:6379"
+    
